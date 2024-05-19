@@ -45,6 +45,12 @@ export class GifsService {
     this.searchTag(this._tagsHistory[0]);
   }
 
+  private clearLocalStorage(): void {
+    this.gifsList = [];
+    this._tagsHistory = [];
+    localStorage.removeItem('History');
+  }
+
   searchTag(tag: string): void {
     if (tag.length == 0) {
       return;
@@ -63,4 +69,7 @@ export class GifsService {
 
   }
 
+  clearList() {
+    this.clearLocalStorage()
+  }
 }

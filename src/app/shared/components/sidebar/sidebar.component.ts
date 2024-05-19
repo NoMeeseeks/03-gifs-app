@@ -20,4 +20,7 @@ export class SidebarComponent {
     this.gifsService.searchTag(tag);
   }
 
+  borrarHistorial() {
+    this.gifsService.clearList();
+  }
 }
