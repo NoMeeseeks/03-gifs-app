@@ -18,5 +18,15 @@ export class GifsCardComponent implements OnInit {
     }
   }
 
+  downloadImage() {
+    const link = document.createElement('a');
+
+    link.setAttribute('href', this.gif.embed_url);
+    // link.setAttribute('download', );
+    link.style.display = 'none';
+
+    document.body.appendChild(link);
+    link.click();
+  }
 
 }
